@@ -1,23 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Error() {
   return (
-    <section class="flex items-center h-full p-16">
-      <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-        <div class="max-w-md text-center">
-          <h2 class="mb-8 font-extrabold text-9xl dark:text-gray-600">
-            <span class="sr-only">Error</span>404
-          </h2>
-          <p class="text-2xl font-semibold md:text-3xl">
-            Üzgünüz, aradığınız sayfayı bulamadık.
-          </p>
-
-          <NavLink to="/">
-            <button class="mt-4 mb-8 px-8 py-3 font-semibold rounded bg-[#202C59] text-gray-50 hover:bg-gray-600">
-              Anasayfa
-            </button>
-          </NavLink>
-        </div>
+    <section className="max-w-6xl mx-auto px-4 py-20">
+      <h1 className="dar text-7xl font-extrabold">Sayfa bulunamadı</h1>
+      <p className="mt-4 text-lg max-w-[50ch]">
+        Bu adreste bir sayfa yok. Adres yanlış yazılmış ya da sayfa kaldırılmış olabilir.
+      </p>
+      <div className="mt-6 flex flex-wrap gap-3">
+        <Link to="/kurumeyve" className="bg-lacivert text-white font-semibold px-5 py-3 rounded hover:bg-lacivert/90">
+          Ürünlere git
+        </Link>
+        <Link to="/" className="border-2 border-lacivert font-semibold px-5 py-3 rounded hover:bg-zemin">
+          Anasayfaya dön
+        </Link>
       </div>
     </section>
   );

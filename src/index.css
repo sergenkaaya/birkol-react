@@ -3,29 +3,14 @@
 @tailwind utilities;
 
 body {
-  background-color:#dcf3ff;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-white text-lacivert antialiased;
 }
 
-.carousel-cont {
+/* Koli baskısı gibi dar başlık kesimi (Archivo wdth ekseni) */
+.dar {
+  font-stretch: 70%;
 }
 
-.urunFoto {
-  width: auto;
-  height : auto;
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.dropdown:hover .dropdown-options {
-  display: block;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-kirmizi;
 }
